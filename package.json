@@ -1,0 +1,45 @@
+{
+  "name": "gms-",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.9.0",
+    "@prisma/client": "^6.7.0",
+    "@radix-ui/react-slot": "^1.2.2",
+    "@uiw/react-md-editor": "^4.0.6",
+    "bcrypt": "^5.1.1",
+    "class-variance-authority": "^0.7.1",
+    "cloudinary": "^2.6.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.507.0",
+    "mysql2": "^3.14.1",
+    "next": "15.3.2",
+    "next-auth": "^4.24.11",
+    "next-seo": "^6.6.0",
+    "prisma": "^6.7.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.5",
+    "tw-animate-css": "^1.2.9",
+    "typescript": "^5"
+  }
+}

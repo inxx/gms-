@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ApprovalStatus {
+  PENDING    // 승인 대기
+  APPROVED   // 승인됨
+  REJECTED   // 거절됨
+}
+
+
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String   // 회원 이름
+  username   String   @unique // 아이디(로그인용, 중복 불가)
+  password   String   // 비밀번호(암호화해서 저장)
+  createdAt  DateTime @default(now()) // 가입일
+  role       String   // 권한 
+  group      String?  // 그룹 
+  status     ApprovalStatus @default(PENDING) // 승인 상태
+}
